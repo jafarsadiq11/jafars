@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jafar Sadiq Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        background-color: rgb(13, 13, 78);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0px 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: rgb(201, 149, 166);
+        font-size: 1.04rem;
+      }
+
+      main hr {
+        border: 0;
+        background: rgb(202, 171, 202);
+        height: 1.2px;
+        margin: 10px 10px;
+      }
+      .left {
+        font-size: 1.5rem;
+      }
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 130px 0;
+      }
+      .firstSection > div {
+        width: 30%;
+      }
+      .leftSection {
+        font-size: 3rem;
+      }
+      .leftSection .buttons {
+        padding: 50px 0;
+      }
+
+      .leftSection .btn {
+        background-color: rgb(5, 5, 78);
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 20px;
+        padding: 6px;
+        cursor: pointer;
+       
+      }
+      .leftSection .btn a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+      }
+
+
+      .rightSection img {
+        width: 80%;
+        margin: 50px 0;
+      }
+      .purple {
+        color: purple;
+      }
+      .text-grey {
+        color: purple;
+      }
+      #element {
+        color: purple;
+      }
+      .secondSection {
+        margin: auto;
+        max-width: 80vw;
+        height: 25vh;
+      }
+      .secondSection h1 {
+        font-size: 1.9rem;
+      }
+
+      .secondSection .box {
+        background: white;
+        width: 76vw;
+        height: 2px;
+        margin: 56px 0;
+        display: flex;
+      }
+
+      .image-top {
+        width: 32px;
+        position: relative;
+        top: -32px;
+        left: -9px;
+      }
+      .vertical-title {
+        position: relative;
+        font-size: 22px;
+        width: 180px;
+      }
+
+      .vertical-desc {
+        position: relative;
+
+        color: grey;
+        width: 150px;
+        font-size: 9px;
+      }
+
+      footer {
+        position: relative;
+        width: 100%;
+        background-color: #200a20;
+        height: 233px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      footer .social-icon,
+      footer .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+
+      footer .social-icon li,
+      footer .menu li {
+        list-style: none;
+      }
+      footer .social-icon li a {
+        font-size: 2em;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+      }
+      footer .social-icon li a:hover {
+        transform: translateY(-10px);
+      }
+      footer .menu li a {
+        font-size: 1.2em;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        text-decoration: none;
+        opacity: 0.75;
+      }
+      footer .menu li a:hover {
+        opacity: 1;
+      }
+      footer p {
+        color: #fff;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
+
+      /*-----------about-----*/
+      #about {
+        padding: 80px 0;
+        color: #ababab;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .about-col-1 {
+        flex-basis: 35%;
+      }
+      
+      
+      .about-col-1 img {
+        width: 100%;
+        border-radius: 15px;
+      }
+      .about-col2 {
+        flex-basis: 60%;
+      }
+      .subtitle {
+        font-size: 45px;
+        font-weight: 600;
+        color: #fff;
+      }
+      .tabtitles {
+        display: flex;
+        margin: 20px 0 40px;
+      }
+      .tablink {
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+      }
+      .tablink::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+      }
+      .tablink.active-link::after {
+        width: 50%;
+      }
+      .tabcontent ul li {
+        list-style: none;
+        margin: 10px 0;
+      }
+      .tabcontent ul li span {
+        color: #b54769;
+        font-size: 14px;
+      }
+      #project {
+        padding: 50px 0;
+      }
+      .worklist {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+      }
+      .work {
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+      }
+      .work img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+      }
+
+      .layer {
+        width: 85%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        font-size: 14px;
+      }
+      .layer h3 {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      .btn{
+        display: block;
+        margin: 50px auto;
+        width: fit-content;
+        border: 1px solid white;
+        padding: 14px 50px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #801717;
+      }
+      .btn:hover{
+        background:  rgb(201, 149, 166);
+      }
+      
+      .mail{
+        display: flex;
+        margin: 0 5px;
+        align-items: center;
+        justify-content: center;
+       
+      
+      }
+      .mail h3{
+        margin: 0 5px;
+        align-items: center;
+        justify-content: center;
+       
+
+      }
+      .contactleft{
+        flex-basis: 35%;
+      }
+      .contactright{
+        flex-basis: 60%;
+        color: black;
+      }
+      .contactleft p{
+        margin-top: 30px;
+
+      }
+      .contactleft p ion-icon{
+        color: #fff;
+        margin-right: 15px;
+        font-size: 20px;
+
+      }
+      .contactright form{
+        width: 100%;
+      }
+      form input,form textarea{
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: #262626;
+        padding: 15px ;
+        margin: 15px 0;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 6px;
+      }
+     #msg{
+      color: #61b752;
+      margin-bottom:40px;
+      display: block;
+      font-size: 30px;
+     }
+
+      @media screen and (max-width: 1400px) {
+        .box {
+          flex-direction: column;
+        }
+
+        .secondSection .vertical {
+          height: unset;
+        }
+        .vertical-title,
+        .vertical-desc {
+          left: 45px;
+        }
+        .firstSection {
+          flex-direction: column-reverse;
+        }
+        .secondSection.box {
+          width: 50vw;
+        }
+        nav {
+          flex-direction: column;
+        }
+        .leftSection {
+          width: 100% !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .rightSection {
+          width: 721px !important;
+          display: flex;
+          justify-content: center;
+        }
+        .rightSection img {
+          width: 45vw;
+          margin-bottom: 73px;
+        }
+        .secondSection {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        body {
+          min-width: fit-content;
+        }
+        .secondSection {
+          height: 140vh;
+        }
+        .subtitle{
+          font-size: 40px;
+        }
+        .about-col-1,.about-col2{
+          flex-basis: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="headscroll"></div>
+    <header >
+      <nav>
+        <div class="left">Jafar Sadiq</div>
+        <div class="right">
+          <ul>
+            <li><a href="#headscroll">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#secsec">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </header>
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          <div>Hii my name is <span class="purple">Jafar</span></div>
+
+          <div>and I'm a programmer</div>
+          <span id="element"></span>
+          <div class="buttons">
+            <button class="btn"><a href="/ASN-II.pdf" download class="btn2">Resume</a></button>
+            <button class="btn"><a href="https://www.linkedin.com/in/jafar-sadiq-k-110a90213">Visit Linkdin</a></button>
+          </div>
+        </div>
+
+        <div class="rightSection">
+          <img src="jaf.png" alt="" />
+        </div>
+      </section>
+
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="IMG_20211008_222138_930-removebg-preview.png" />
+            </div>
+            <div class="about-col2">
+              <h1 class="subtitle">About Me</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit, Lorem ipsum dolor si t amet consectetur
+                adipisicing elit. Quam, architecto!
+              </p>
+              <div class="tabtitles">
+                <p class="tablink">Education</p>
+              </div>
+              <div class="tabcontent">
+                <ul>
+                  <li>
+                    <span>Pimary and High School</span><br />Prema Jyothi
+                    Convent
+                  </li>
+                  <li>
+                    <span>Intermediate</span><br />Kadur Science PU College
+                  </li>
+                  <li><span>Graduation</span><br />PESCE,Mandya</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="project">
+        <div class="container">
+          <h1 class="subtitle">My Projects</h1>
+          <div class="worklist">
+            <div class="work">
+              <img src="webd.jpg" />
+              <div class="layer">
+                <h3>Portfolio Website</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="work">
+              <img src="cprojects.jpg" />
+              <div class="layer">
+                <h3>Device Driver</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="work">
+              <img src="weather.jpg" />
+              <div class="layer">
+                <h3>Weather report site</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              </div>
+            
+        </div>
+      </div>
+      <a href="#" class="btn">See More</a>
+    </div>
+      </div>
+      <hr />
+      <div id="secsec">
+      <section class="secondSection">
+        <span class="text-grey"></span>
+        <h1>Skills</h1>
+
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="" alt="" />
+            <div class="vertical-title">C/C++</div>
+            <div class="vertical-desc"></div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="" alt="" />
+            <div class="vertical-title">Python</div>
+            <div class="vertical-desc"></div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="" alt="" />
+            <div class="vertical-title">HTML/CSS</div>
+            <div class="vertical-desc"></div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="" alt="" />
+            <div class="vertical-title">Javascript</div>
+            <div class="vertical-desc"></div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="" alt="" />
+            <div class="vertical-title">React JS</div>
+            <div class="vertical-desc"></div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="" alt="" />
+            <div class="vertical-title">MySQL</div>
+            <div class="vertical-desc"></div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="" alt="" />
+            <div class="vertical-title">Verilog HDL</div>
+            <div class="vertical-desc"></div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="" alt="" />
+            <div class="vertical-title">IoT</div>
+            <div class="vertical-desc"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contactleft">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><ion-icon name="mail-outline"></ion-icon>jafarsadiqkf@gmail.com</p>
+                <p><ion-icon name="call-outline"></ion-icon>+91 9900988297</p>
+
+          </div>
+          <div class="contactright">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea  name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <ul class="social-icon">
+        <li>
+          <a href="https://www.instagram.com/jafarsadiq_26_/"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+        <li>
+          <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jafar-sadiq-k-110a90213"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </li>
+        <li>
+          <a href="https://github.com/jafarsadiq11"><ion-icon name="logo-github"></ion-icon></a>
+        </li>
+      </ul>
+      <span>Follow Me</span>
+      
+      
+      <p>&#169; www.jafarsadiqweb.com | All Rights Reserved</p>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Student", "Web Designer", "Frontend developer!"],
+        typeSpeed: 50,
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwT4gVhuBHQ4mb0SMX2fyGHWPkpY-0q4BVtdhcmdSKlhRZq1qdQC-XEhLwMLnxv0JmB-Q/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML="Message sent successfully!"
+            setTimeout(function(){
+              msg.innerHTML=""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+  </body>
+</html>
