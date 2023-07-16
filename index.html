@@ -32,6 +32,7 @@
         align-items: center;
         height: 85px;
         background-color: rgb(13, 13, 78);
+        
       }
       nav ul {
         display: flex;
@@ -40,6 +41,7 @@
       nav ul li {
         list-style: none;
         margin: 0px 23px;
+        font-size: 20px;
       }
       nav ul li a {
         text-decoration: none;
@@ -57,7 +59,7 @@
         margin: 10px 10px;
       }
       .left {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
       }
       .firstSection {
         display: flex;
@@ -108,7 +110,7 @@
       .secondSection {
         margin: auto;
         max-width: 80vw;
-        height: 25vh;
+        height: 40vh;
       }
       .secondSection h1 {
         font-size: 1.9rem;
@@ -131,20 +133,14 @@
       .vertical-title {
         position: relative;
         font-size: 22px;
-        width: 180px;
+        width: 139px;
       }
 
-      .vertical-desc {
-        position: relative;
-
-        color: grey;
-        width: 150px;
-        font-size: 9px;
-      }
+      
 
       footer {
         position: relative;
-        width: 100%;
+        width: 87%;
         background-color: #200a20;
         height: 233px;
         padding: 20px 50px;
@@ -221,11 +217,15 @@
       }
       .about-col2 {
         flex-basis: 60%;
+        
       }
       .subtitle {
         font-size: 45px;
         font-weight: 600;
         color: #fff;
+      }
+      .about-col2  p{
+        font-size: 20px;
       }
       .tabtitles {
         display: flex;
@@ -350,7 +350,7 @@
         width: 100%;
       }
       form input,form textarea{
-        width: 100%;
+        width: 92%;
         border: 0;
         outline: none;
         background: #262626;
@@ -366,8 +366,20 @@
       display: block;
       font-size: 30px;
      }
+     .sk{
+      font-size: 20px;
+      height: 50vh;
 
-      @media screen and (max-width: 1400px) {
+     }
+     .sk ul{
+      display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 85px;
+        list-style: none;
+       font-size: 34px;
+     }
+     @media screen and (max-width: 1400px) {
         .box {
           flex-direction: column;
         }
@@ -421,14 +433,18 @@
         .about-col-1,.about-col2{
           flex-basis: 50%;
         }
+        .sk{
+          height: 40vh;
+        }
       }
+     
     </style>
   </head>
   <body>
     <div id="headscroll"></div>
     <header >
       <nav>
-        <div class="left">Jafar Sadiq</div>
+        <div class="left">Jafar Sadiq.</div>
         <div class="right">
           <ul>
             <li><a href="#headscroll">Home</a></li>
@@ -519,56 +535,26 @@
       <a href="#" class="btn">See More</a>
     </div>
       </div>
-      <hr />
+      
       <div id="secsec">
-      <section class="secondSection">
-        <span class="text-grey"></span>
+      <div class="sk">
         <h1>Skills</h1>
-
-        <div class="box">
-          <div class="vertical">
-            <img class="image-top" src="" alt="" />
-            <div class="vertical-title">C/C++</div>
-            <div class="vertical-desc"></div>
-          </div>
-          <div class="vertical">
-            <img class="image-top" src="" alt="" />
-            <div class="vertical-title">Python</div>
-            <div class="vertical-desc"></div>
-          </div>
-          <div class="vertical">
-            <img class="image-top" src="" alt="" />
-            <div class="vertical-title">HTML/CSS</div>
-            <div class="vertical-desc"></div>
-          </div>
-          <div class="vertical">
-            <img class="image-top" src="" alt="" />
-            <div class="vertical-title">Javascript</div>
-            <div class="vertical-desc"></div>
-          </div>
-          <div class="vertical">
-            <img class="image-top" src="" alt="" />
-            <div class="vertical-title">React JS</div>
-            <div class="vertical-desc"></div>
-          </div>
-          <div class="vertical">
-            <img class="image-top" src="" alt="" />
-            <div class="vertical-title">MySQL</div>
-            <div class="vertical-desc"></div>
-          </div>
-          <div class="vertical">
-            <img class="image-top" src="" alt="" />
-            <div class="vertical-title">Verilog HDL</div>
-            <div class="vertical-desc"></div>
-          </div>
-          <div class="vertical">
-            <img class="image-top" src="" alt="" />
-            <div class="vertical-title">IoT</div>
-            <div class="vertical-desc"></div>
-          </div>
-        </div>
-      </section>
+        <ul>
+          <li>C/C++</li>
+          <li>Python</li>
+          <li>HTML/CSS</li>
+          <li>Javascript</li>
+          
+        </ul>
+        <ul>
+          <li>React JS</li>
+          <li>MySQL</li>
+          <li>Verilog HDL</li>
+          <li>IoT</li>
+        </UL>
+      </div>
     </div>
+    <hr />
       <div id="contact">
         <div class="container">
           <div class="row">
